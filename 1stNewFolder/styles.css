@@ -4,6 +4,7 @@ body {
   background-color: pink;
   margin: 0;
   text-align: center;
+  padding-top: 60px;
 }
 
 header {
@@ -13,6 +14,13 @@ header {
   align-items: center; /* Align items vertically */
   background-color: lightblue; /* Example background color */
   padding: 10px; /* Some padding */
+}
+.header {
+  position: fixed; /* Fixes the header at its position */
+  top: 0; /* Aligns the header at the top of the viewport */
+  width: 100%; /* Ensures the header spans the full width */
+  z-index: 1000; /* Ensures the header stays on top of other content */
+  /* Add other styling as needed (background, padding, etc.) */
 }
 
 header h1 {
@@ -79,5 +87,31 @@ nav ul li a:hover {
 
   nav ul li {
     margin: 5px 0; /* Adjust margin for stacked items */
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1; /* Each column takes up equal space */
+  margin: 10px; /* Adjust as needed for spacing between columns */
+  padding: 20px; /* Padding inside each column */
+  background-color: darkgray;
+  border: 10px solid black;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Optional: Hover effect */
+.column:hover {
+  background-color: lightgray; /* Change color on hover */
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
   }
 }
